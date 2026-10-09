@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "id": "calc_simple",
+      "task": "Compute (23*17)+145 using the calculator tool. Reply with the number only.",
+      "check": {"type": "number", "value": 536}
+    },
+    {
+      "id": "calc_percent",
+      "task": "What is 15% of 2480? Use the calculator tool. Reply with the number only.",
+      "check": {"type": "number", "value": 372}
+    },
+    {
+      "id": "calc_multistep",
+      "task": "A train travels 4 hours at 85 km/h, then 2.5 hours at 60 km/h. What is the total distance in km? Use the calculator tool. Reply with the number only.",
+      "check": {"type": "number", "value": 490}
+    },
+    {
+      "id": "read_json",
+      "task": "Read the file evals/fixtures/config.json. Which city is the server in? Reply with one word.",
+      "check": {"type": "contains", "value": "Berlin"}
+    },
+    {
+      "id": "read_csv_sum",
+      "task": "Read the file evals/fixtures/prices.csv and compute the total price of all items with the calculator tool. Reply with the number only.",
+      "check": {"type": "number", "value": 310}
+    },
+    {
+      "id": "no_tool_needed",
+      "task": "Answer from memory, without using any tools: what is the capital of France? Reply with one word.",
+      "check": {"type": "contains", "value": "Paris"},
+      "expect_no_tools": true
+    },
+    {
+      "id": "error_recovery",
+      "task": "Use the calculator tool to compute 10/0, then use it again to compute 100/4 instead. Reply with the final number only.",
+      "check": {"type": "number", "value": 25}
+    },
+    {
+      "id": "http_get",
+      "task": "Fetch https://example.com with the http_get tool. What is the <title> of the page? Reply with the title text only.",
+      "check": {"type": "contains", "value": "Example Domain"},
+      "requires_network": true
+    }
+  ]
+}

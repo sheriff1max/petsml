@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+evals/results.json
+evals/traces.jsonl
+traces/
+.venv/
+.env

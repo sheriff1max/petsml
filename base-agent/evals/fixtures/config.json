@@ -1,0 +1,6 @@
+{
+  "server": "prod-eu-1",
+  "city": "Berlin",
+  "port": 8443,
+  "replicas": 4
+}
